@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField]private Transform groundCheck;         //így is lehetne --> public Transform groundCheck;   
     
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,7 @@ public class Player : MonoBehaviour
     // FixedUpdate is called once per every physic update
     private void FixedUpdate() 
     {
-        rigidbodyComp.velocity = new Vector3(horizontelInput*2, rigidbodyComp.velocity.y, 0);
+        rigidbodyComp.velocity = new Vector3(horizontelInput*4, rigidbodyComp.velocity.y, 0);
 
         if (Physics.OverlapSphere(groundCheck.position, 0.1f).Length == 1)
         {
@@ -44,6 +45,7 @@ public class Player : MonoBehaviour
             jumpKeyWasPressed = false;
         }
 
+         
         
     }
 

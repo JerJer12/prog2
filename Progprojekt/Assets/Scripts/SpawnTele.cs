@@ -9,6 +9,9 @@ public class SpawnTele : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Player.transform.position = teleportTarget.transform.position;
+        if (other.gameObject.tag==("Player"))
+        {
+            Player.transform.position = teleportTarget.transform.position;
+        }
     }
 }

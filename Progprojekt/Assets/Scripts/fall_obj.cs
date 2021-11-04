@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class fall_obj : MonoBehaviour
 {
-    [SerializeField] private Transform player;
+    [SerializeField] private Transform obj;
     [SerializeField] private Transform spawn;
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag=="Player")
-        {
-            player.transform.position = spawn.transform.position;
-        }
+        obj.transform.position = spawn.transform.position;
     }
 
 }

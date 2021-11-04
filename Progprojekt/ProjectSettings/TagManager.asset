@@ -7,6 +7,7 @@ TagManager:
   - Playertag
   - checkpoint
   - respawn
+  - Coin
   layers:
   - Default
   - TransparentFX

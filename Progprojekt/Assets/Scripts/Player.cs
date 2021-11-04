@@ -49,7 +49,15 @@ public class Player : MonoBehaviour
         
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Enemy head"))
+            {
+            Destroy(other.transform.parent.gameObject);
+        }
+    }
+
+
 
 
 }

@@ -8,6 +8,7 @@ TagManager:
   - checkpoint
   - respawn
   - Coin
+  - Enemy head
   layers:
   - Default
   - TransparentFX

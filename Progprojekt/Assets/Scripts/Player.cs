@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     private float horizontelInput;
     private Rigidbody rigidbodyComp;
     [SerializeField]private Transform groundCheck;         //így is lehetne --> public Transform groundCheck;   
-    
+    [SerializeField] AudioSource jumpsound;
 
 
     // Start is called before the first frame update
@@ -42,7 +42,9 @@ public class Player : MonoBehaviour
          if(jumpKeyWasPressed)
         {
             rigidbodyComp.AddForce(Vector3.up * 7, ForceMode.VelocityChange);
+            jumpsound.Play();
             jumpKeyWasPressed = false;
+
         }
 
          

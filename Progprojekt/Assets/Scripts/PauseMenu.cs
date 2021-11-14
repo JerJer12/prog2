@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pausescrn;
+    [SerializeField] GameObject settings;
 
     // Update is called once per frame
     void Update()
@@ -16,6 +17,8 @@ public class PauseMenu : MonoBehaviour
             {
                 pausescrn.gameObject.SetActive(true);
                 Time.timeScale = 0f;
+                settings.gameObject.SetActive(false);
+
             }
 
             else
@@ -34,7 +37,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    /*public void Settting()
+    /*public void Setting()
     {
 
     }

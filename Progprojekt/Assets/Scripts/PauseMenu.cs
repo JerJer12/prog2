@@ -7,24 +7,31 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pausescrn;
     [SerializeField] GameObject settings;
+    [SerializeField] GameObject Endscrn;
+    [SerializeField] GameObject paused;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Endscrn.gameObject.activeInHierarchy == false)
         {
-            if(pausescrn.gameObject.activeInHierarchy==false)
-            {
-                pausescrn.gameObject.SetActive(true);
-                Time.timeScale = 0f;
-                settings.gameObject.SetActive(false);
 
-            }
-
-            else
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                pausescrn.gameObject.SetActive(false);
-                Time.timeScale = 1f;
+                if (pausescrn.gameObject.activeInHierarchy == false)
+                {
+                    pausescrn.gameObject.SetActive(true);
+                    Time.timeScale = 0f;
+                    settings.gameObject.SetActive(false);
+                    paused.gameObject.SetActive(true);
+                }
+
+                else
+                {
+                    pausescrn.gameObject.SetActive(false);
+                    Time.timeScale = 1f;
+                    settings.gameObject.SetActive(false);
+                }
             }
         }
            

@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 4865354688078844285}
   jumpsound: {fileID: 3978833088903340427}
+  EnemyDeathSound: {fileID: 0}
 --- !u!114 &4865354687705776530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,3 +610,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausescrn: {fileID: 0}
   settings: {fileID: 0}
+  Endscrn: {fileID: 0}
+  paused: {fileID: 0}

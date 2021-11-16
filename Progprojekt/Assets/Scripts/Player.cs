@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private Rigidbody rigidbodyComp;
     [SerializeField]private Transform groundCheck;         //így is lehetne --> public Transform groundCheck;   
     [SerializeField] AudioSource jumpsound;
+    [SerializeField] AudioSource EnemyDeathSound;
 
 
     // Start is called before the first frame update
@@ -27,7 +28,9 @@ public class Player : MonoBehaviour
         }
 
         horizontelInput = Input.GetAxis("Horizontal");
+
     }
+
 
     // FixedUpdate is called once per every physic update
     private void FixedUpdate() 
@@ -56,6 +59,7 @@ public class Player : MonoBehaviour
         if(other.gameObject.CompareTag("Enemy head"))
             {
             Destroy(other.transform.parent.gameObject);
+            EnemyDeathSound.Play();
         }
     }
 

@@ -9,6 +9,8 @@ TagManager:
   - respawn
   - Coin
   - Enemy head
+  - bouncepad
+  - reset
   layers:
   - Default
   - TransparentFX

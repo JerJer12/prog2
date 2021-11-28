@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField]private Transform groundCheck;         //így is lehetne --> public Transform groundCheck;   
     [SerializeField] AudioSource jumpsound;
     [SerializeField] AudioSource EnemyDeathSound;
+   
 
 
     // Start is called before the first frame update
@@ -60,6 +61,13 @@ public class Player : MonoBehaviour
             {
             Destroy(other.transform.parent.gameObject);
             EnemyDeathSound.Play();
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("bouncepad"))
+        {
+            rigidbodyComp.AddForce(Vector3.up * 14, ForceMode.VelocityChange);
         }
     }
 

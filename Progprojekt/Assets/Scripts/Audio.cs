@@ -25,17 +25,17 @@ public class Audio : MonoBehaviour
             Load();
         }
         //test
-
+        /*
         if (!PlayerPrefs.HasKey("Musicvolume"))     
         {
-            PlayerPrefs.SetFloat("Musicvolume", 1);
+            PlayerPrefs.SetFloat("Musicvolume", 0);
             Load();
         }
         else
         {
             Load();
         }
-
+        */
         /*
         if (!PlayerPrefs.HasKey("Sfxvolume"))       //gets called when playerpref doesnt have the "volume", so if no volume was set beforehand it will be set to one
         {
@@ -79,6 +79,7 @@ public class Audio : MonoBehaviour
     }
 
     //test begin
+    /*
     public void MusicVolSlider()
     {
         if (muted == false)
@@ -87,7 +88,7 @@ public class Audio : MonoBehaviour
             Save();
         }
     }
-
+    */
     /*
     public void SfxVolSlider()
     {
@@ -110,14 +111,14 @@ public class Audio : MonoBehaviour
     private void Save()
     {
         PlayerPrefs.SetFloat("volume", VolumeSlider.value);
-        PlayerPrefs.SetFloat("Musicvolume", MusicVolumeSlider.value);
+        //PlayerPrefs.SetFloat("Musicvolume", MusicVolumeSlider.value);
         //PlayerPrefs.SetFloat("Sfxvolume", SfxVolumeSlider.value);
     }
 
     private void Load()
     {
         VolumeSlider.value = PlayerPrefs.GetFloat("volume");
-        MusicVolumeSlider.value = PlayerPrefs.GetFloat("Musicvolume");
+        //MusicVolumeSlider.value = PlayerPrefs.GetFloat("Musicvolume");
         //SfxVolumeSlider.value = PlayerPrefs.GetFloat("Sfxvolume");
 
     }
